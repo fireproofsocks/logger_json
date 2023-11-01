@@ -36,7 +36,8 @@ defmodule LoggerJSON.Mixfile do
   defp deps do
     [
       {:jason, "~> 1.0"},
-      {:ecto, "~> 2.1 or ~> 3.0", optional: true},
+      # {:ecto, "~> 2.1 or ~> 3.0", optional: true},
+      {:ecto, env: :prod, git: "https://github.com/elixir-ecto/ecto.git", optional: true},
       {:plug, "~> 1.0", optional: true},
       {:phoenix, ">= 1.5.0", optional: true},
       {:telemetry, "~> 0.4.0 or ~> 1.0", optional: true},
